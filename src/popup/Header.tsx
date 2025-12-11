@@ -47,7 +47,8 @@ export function Header(props: HeaderProps) {
     <div className="Header">
 
       {/* Status */}
-      <div 
+      <button
+        aria-label="Toggle extension"
         className={view.enabled ? "active" : "muted"}
         onClick={() => {
           setView({enabled: !view.enabled, latestViaShortcut: false})
@@ -59,17 +60,17 @@ export function Header(props: HeaderProps) {
         }}
       >
         <FaPowerOff size="1.21rem"/>
-      </div>
+      </button>
 
       {/* Pin */}
-      <div 
+      <button
+        aria-label={gvar.gsm.token.pinTooltip}
         className={`pin ${view.isPinned ? "active" : "muted"}`}
         onClick={() => clearPin()}
         onContextMenu={e => clearPin(e)}
-        title={gvar.gsm.token.pinTooltip}
       >
         <Pin size="1.42rem"/>
-      </div>
+      </button>
 
       {/* Circle gesture */}
       {(props.panel === 0 && view.circleWidgetIcon) ? (
@@ -88,26 +89,27 @@ export function Header(props: HeaderProps) {
 
       {/* Back button */}
       {props.panel !== 0 ? (
-        <div 
+        <button
+          aria-label="Go back"
           onClick={e => props.setPanel(0)}
         >
           <GoArrowLeft size="1.42rem"/>
-        </div>
+        </button>
       ) : <div className="noPadding"/>}
 
       {/* Options page */}
-      <div title="open options page." onClick={e => {
+      <button aria-label="Open options page" onClick={e => {
         chrome.runtime.openOptionsPage()
       }}>
         <Gear size="1.42rem"/>
-      </div>
+      </button>
 
       {/* Github */}
-      <div title="open github page." onClick={e => {
+      <button aria-label="Open GitHub page" onClick={e => {
         window.open("https://github.com/polywock/globalSpeed", "_blank")
       }}>
         <FaGithub size="1.28rem"/>
-      </div>
+      </button>
       
     </div>
   )
@@ -132,7 +134,8 @@ export function FxIcon(props: FxIconProps) {
   }, [props.enabled, view])
 
   return (
-    <div 
+    <button
+      aria-label="Toggle video filters"
       className={`beat ${fxActive ? "active" : ""}`} 
       onClick={e => props.onClick()}
       onContextMenu={e => {
@@ -141,7 +144,7 @@ export function FxIcon(props: FxIconProps) {
       }}
     >
       <Zap size="1.42rem"/>
-    </div>
+    </button>
   )
 }
 
@@ -154,7 +157,8 @@ export function AudioIcon(props: AudioIconProps) {
   const status = useCaptureStatus()
 
   return (
-    <div 
+    <button
+      aria-label="Toggle audio effects"
       className={`beat ${status ? "active" : ""}`} 
       onClick={props.onClick}
       onContextMenu={e => {
@@ -168,7 +172,7 @@ export function AudioIcon(props: AudioIconProps) {
       }}
     >
       <FaVolumeUp size="1.2rem"/>
-    </div>
+    </button>
   )
 }
 
@@ -182,7 +186,8 @@ type CircleIconProps = {
 export function CircleIcon(props: CircleIconProps) {
 
   return (
-    <div 
+    <button
+      aria-label="Toggle circle widget"
       className={`beat ${props.active ? "active" : ""}`} 
       onContextMenu={e => {
         e.preventDefault()
@@ -198,6 +203,6 @@ export function CircleIcon(props: CircleIconProps) {
       }}
     >
       <FaCircleDot size="1.02rem"/>
-    </div>
+    </button>
   )
 }
