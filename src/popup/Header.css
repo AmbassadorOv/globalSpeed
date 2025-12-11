@@ -9,11 +9,12 @@
   background-color: var(--fg-color);
 
 
-  & > div {
+  & > button {
     padding: 0 5px;
     color: var(--header-icon-color);
     border: none;
     cursor: pointer;
+    background: none;
 
     &.noPadding {
       padding: 0;
