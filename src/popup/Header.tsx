@@ -1,4 +1,5 @@
 import { useMemo } from "react"
+import Tooltip from "./Tooltip"
 import { checkFilterDeviation, requestSyncContextMenu } from "../utils/configUtils"
 import { GoArrowLeft} from "react-icons/go"
 import { FaGithub, FaRegCircle } from "react-icons/fa";
@@ -47,30 +48,34 @@ export function Header(props: HeaderProps) {
     <div className="Header">
 
       {/* Status */}
-      <button
-        aria-label="Toggle extension"
-        className={view.enabled ? "active" : "muted"}
-        onClick={() => {
-          setView({enabled: !view.enabled, latestViaShortcut: false})
-        }}
-        onContextMenu={e => {
-          e.preventDefault()
-          setView({superDisable: true})
-          requestSyncContextMenu()
-        }}
-      >
-        <FaPowerOff size="1.21rem"/>
-      </button>
+      <Tooltip text="Toggle extension">
+        <button
+          aria-label="Toggle extension"
+          className={view.enabled ? "active" : "muted"}
+          onClick={() => {
+            setView({enabled: !view.enabled, latestViaShortcut: false})
+          }}
+          onContextMenu={e => {
+            e.preventDefault()
+            setView({superDisable: true})
+            requestSyncContextMenu()
+          }}
+        >
+          <FaPowerOff size="1.21rem"/>
+        </button>
+      </Tooltip>
 
       {/* Pin */}
-      <button
-        aria-label={gvar.gsm.token.pinTooltip}
-        className={`pin ${view.isPinned ? "active" : "muted"}`}
-        onClick={() => clearPin()}
-        onContextMenu={e => clearPin(e)}
-      >
-        <Pin size="1.42rem"/>
-      </button>
+      <Tooltip text={gvar.gsm.token.pinTooltip}>
+        <button
+          aria-label={gvar.gsm.token.pinTooltip}
+          className={`pin ${view.isPinned ? "active" : "muted"}`}
+          onClick={() => clearPin()}
+          onContextMenu={e => clearPin(e)}
+        >
+          <Pin size="1.42rem"/>
+        </button>
+      </Tooltip>
 
       {/* Circle gesture */}
       {(props.panel === 0 && view.circleWidgetIcon) ? (
@@ -89,27 +94,33 @@ export function Header(props: HeaderProps) {
 
       {/* Back button */}
       {props.panel !== 0 ? (
-        <button
-          aria-label="Go back"
-          onClick={e => props.setPanel(0)}
-        >
-          <GoArrowLeft size="1.42rem"/>
-        </button>
+        <Tooltip text="Go back">
+          <button
+            aria-label="Go back"
+            onClick={e => props.setPanel(0)}
+          >
+            <GoArrowLeft size="1.42rem"/>
+          </button>
+        </Tooltip>
       ) : <div className="noPadding"/>}
 
       {/* Options page */}
-      <button aria-label="Open options page" onClick={e => {
-        chrome.runtime.openOptionsPage()
-      }}>
-        <Gear size="1.42rem"/>
-      </button>
+      <Tooltip text="Open options page">
+        <button aria-label="Open options page" onClick={e => {
+          chrome.runtime.openOptionsPage()
+        }}>
+          <Gear size="1.42rem"/>
+        </button>
+      </Tooltip>
 
       {/* Github */}
-      <button aria-label="Open GitHub page" onClick={e => {
-        window.open("https://github.com/polywock/globalSpeed", "_blank")
-      }}>
-        <FaGithub size="1.28rem"/>
-      </button>
+      <Tooltip text="Open GitHub page">
+        <button aria-label="Open GitHub page" onClick={e => {
+          window.open("https://github.com/polywock/globalSpeed", "_blank")
+        }}>
+          <FaGithub size="1.28rem"/>
+        </button>
+      </Tooltip>
       
     </div>
   )
@@ -127,24 +138,26 @@ export function FxIcon(props: FxIconProps) {
 
   const fxActive = useMemo(() => {
     if (view && props.enabled) {
-      if (view.backdropFx?.enabled && (checkFilterDeviation(view.backdropFx.filters) ||checkFilterDeviation(view.backdropFx.transforms))) return true 
-      if (view.elementFx?.enabled && (checkFilterDeviation(view.elementFx.filters) ||checkFilterDeviation(view.elementFx.transforms))) return true 
+      if (view.backdropFx?.enabled && (checkFilterDeviation(view.backdropFx.filters) ||checkFilterDeviation(view.backdropFx.transforms))) return true
+      if (view.elementFx?.enabled && (checkFilterDeviation(view.elementFx.filters) ||checkFilterDeviation(view.elementFx.transforms))) return true
     }
-    return false 
+    return false
   }, [props.enabled, view])
 
   return (
-    <button
-      aria-label="Toggle video filters"
-      className={`beat ${fxActive ? "active" : ""}`} 
-      onClick={e => props.onClick()}
-      onContextMenu={e => {
-        e.preventDefault()
-        setView({elementFx: getDefaultFx(), backdropFx: getDefaultFx()})
-      }}
-    >
-      <Zap size="1.42rem"/>
-    </button>
+    <Tooltip text="Toggle video filters">
+      <button
+        aria-label="Toggle video filters"
+        className={`beat ${fxActive ? "active" : ""}`}
+        onClick={e => props.onClick()}
+        onContextMenu={e => {
+          e.preventDefault()
+          setView({elementFx: getDefaultFx(), backdropFx: getDefaultFx()})
+        }}
+      >
+        <Zap size="1.42rem"/>
+      </button>
+    </Tooltip>
   )
 }
 
@@ -157,22 +170,24 @@ export function AudioIcon(props: AudioIconProps) {
   const status = useCaptureStatus()
 
   return (
-    <button
-      aria-label="Toggle audio effects"
-      className={`beat ${status ? "active" : ""}`} 
-      onClick={props.onClick}
-      onContextMenu={e => {
-        e.preventDefault()
-        releaseTabCapture(gvar.tabInfo.tabId)
-        pushView({override: {
-          audioFx: getDefaultAudioFx(),
-          audioFxAlt: null,
-          audioPan: null
-        }, tabId: gvar.tabInfo.tabId})
-      }}
-    >
-      <FaVolumeUp size="1.2rem"/>
-    </button>
+    <Tooltip text="Toggle audio effects">
+      <button
+        aria-label="Toggle audio effects"
+        className={`beat ${status ? "active" : ""}`}
+        onClick={props.onClick}
+        onContextMenu={e => {
+          e.preventDefault()
+          releaseTabCapture(gvar.tabInfo.tabId)
+          pushView({override: {
+            audioFx: getDefaultAudioFx(),
+            audioFxAlt: null,
+            audioPan: null
+          }, tabId: gvar.tabInfo.tabId})
+        }}
+      >
+        <FaVolumeUp size="1.2rem"/>
+      </button>
+    </Tooltip>
   )
 }
 
@@ -186,23 +201,25 @@ type CircleIconProps = {
 export function CircleIcon(props: CircleIconProps) {
 
   return (
-    <button
-      aria-label="Toggle circle widget"
-      className={`beat ${props.active ? "active" : ""}`} 
-      onContextMenu={e => {
-        e.preventDefault()
-        pushView({override: {
-          circleWidget: false
-        }, tabId: gvar.tabInfo.tabId})
-      }}
-      onClick={() => {
-        pushView({override: {
-          circleWidget: !props.active
-        }, tabId: gvar.tabInfo.tabId})
-        if (!props.active) feedbackText(gvar.gsm.options.flags.widget.headerTooltip, null, 2400)
-      }}
-    >
-      <FaCircleDot size="1.02rem"/>
-    </button>
+    <Tooltip text="Toggle circle widget">
+      <button
+        aria-label="Toggle circle widget"
+        className={`beat ${props.active ? "active" : ""}`}
+        onContextMenu={e => {
+          e.preventDefault()
+          pushView({override: {
+            circleWidget: false
+          }, tabId: gvar.tabInfo.tabId})
+        }}
+        onClick={() => {
+          pushView({override: {
+            circleWidget: !props.active
+          }, tabId: gvar.tabInfo.tabId})
+          if (!props.active) feedbackText(gvar.gsm.options.flags.widget.headerTooltip, null, 2400)
+        }}
+      >
+        <FaCircleDot size="1.02rem"/>
+      </button>
+    </Tooltip>
   )
 }
