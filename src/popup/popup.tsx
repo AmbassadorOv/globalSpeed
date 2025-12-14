@@ -24,8 +24,10 @@ export function App(props: {}) {
 
   if (view.superDisable) {
     return (
-      <div 
+      <button
         id={"SuperDisable"}
+        title={"Click to enable"}
+        aria-label={"Click to enable"}
         onClick={() => {
           setView({superDisable: false, enabled: true})
         }}
@@ -33,9 +35,10 @@ export function App(props: {}) {
           e.preventDefault()
           setView({superDisable: false, enabled: true})
         }}
+        style={{border: 'none', background: 'none', padding: 0, margin: 0}}
       >
         <FaPowerOff size="1.78rem"/>
-      </div>
+      </button>
     )
   }
 
