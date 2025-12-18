@@ -9,11 +9,22 @@ body {
   /* overflow-x: hidden; */
 }
 
-#SuperDisable {
+.SuperDisable {
   padding: 10px;
   background-color: #fafafa; 
   color: #666; 
   cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.SuperDisable:hover {
+  background-color: #eee;
+}
+
+.SuperDisable:focus {
+  outline: 2px solid var(--blue-color);
+  outline-offset: -2px;
 }
 
 #App {

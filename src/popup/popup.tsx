@@ -24,8 +24,9 @@ export function App(props: {}) {
 
   if (view.superDisable) {
     return (
-      <div 
-        id={"SuperDisable"}
+      <button
+        className={"SuperDisable"}
+        aria-label="Turn on"
         onClick={() => {
           setView({superDisable: false, enabled: true})
         }}
@@ -35,7 +36,7 @@ export function App(props: {}) {
         }}
       >
         <FaPowerOff size="1.78rem"/>
-      </div>
+      </button>
     )
   }
 
