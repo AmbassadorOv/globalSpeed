@@ -24,18 +24,15 @@ export function App(props: {}) {
 
   if (view.superDisable) {
     return (
-      <div 
+      <button
         id={"SuperDisable"}
+        aria-label="Enable Global Speed"
         onClick={() => {
-          setView({superDisable: false, enabled: true})
-        }}
-        onContextMenu={e => {
-          e.preventDefault()
           setView({superDisable: false, enabled: true})
         }}
       >
         <FaPowerOff size="1.78rem"/>
-      </div>
+      </button>
     )
   }
 
