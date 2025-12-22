@@ -188,6 +188,7 @@ export function CircleIcon(props: CircleIconProps) {
   return (
     <button
       aria-label="Toggle circle widget"
+      title={gvar.gsm.options.flags.widget.headerTooltip}
       className={`beat ${props.active ? "active" : ""}`} 
       onContextMenu={e => {
         e.preventDefault()
