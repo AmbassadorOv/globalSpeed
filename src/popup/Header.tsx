@@ -64,7 +64,7 @@ export function Header(props: HeaderProps) {
 
       {/* Pin */}
       <button
-        aria-label={gvar.gsm.token.pinTooltip}
+        aria-label={view.isPinned ? gvar.gsm.token.unpinTooltip : gvar.gsm.token.pinTooltip}
         className={`pin ${view.isPinned ? "active" : "muted"}`}
         onClick={() => clearPin()}
         onContextMenu={e => clearPin(e)}

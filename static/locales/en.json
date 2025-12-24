@@ -19,6 +19,7 @@
     "duplicate": "duplicate",
 
     "pinTooltip": "Pin if you want current tab to have it's own context (speed, filters, etc).",
+    "unpinTooltip": "Unpin this tab to use the global settings.",
     "mergeBoth": "merge both",
     "min": "min",
     "max": "max",
