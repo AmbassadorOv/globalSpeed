@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שלושת הספרים — מיפוי מטאפיזי וקוגניטיבי</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #e67e22;
+      --light: #ecf0f1;
+      --dark: #1e2a3a;
+      --text: #2c3e50;
+    }
+    body {
+      font-family: 'David Libre', serif;
+      background: linear-gradient(to bottom, var(--light), white);
+      color: var(--text);
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      text-align: right;
+    }
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    main {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    .book-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      border-top: 6px solid var(--accent);
+    }
+    .book-title {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+    }
+    .book-desc {
+      font-size: 1.15rem;
+      margin: 1rem 0;
+    }
+    .hebrew-quote {
+      font-family: 'David Libre', serif;
+      font-size: 1.4rem;
+      color: var(--primary);
+      padding: 1.5rem;
+      background: rgba(230, 126, 34, 0.1);
+      border-right: 4px solid var(--accent);
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+    .interlock {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .interlock h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .layer-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .layer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .layer-title {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--primary);
+      color: white;
+      margin-top: 4rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    body {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .layer-card {
+      opacity: 0;
+      animation: slideUp 0.5s ease-in-out forwards;
+    }
+
+    .grid .layer-card:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .grid .layer-card:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .grid .layer-card:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>שלושת הספרים — ספר, ספר, ספור</h1>
+  <p>מיפוי מטאפיזי וקוגניטיבי של 22 האותיות</p>
+</header>
+
+<main>
+
+  <div class="book-section">
+    <h2 class="book-title">המבנה השלישי של האותיות</h2>
+    <p class="book-desc">
+      העולם האותיות מתפרק לשלושה ספרים מקבילים, בדומה לשלושת הרבדים של האדם: גוף, נפש, שכל.
+      כל ספר מתאים לאופן שבו האותיות מתגלות:
+    </p>
+
+    <div class="grid">
+      <!-- ספר כתיבה – גוף -->
+      <div class="layer-card">
+        <h3 class="layer-title">ספר (כתיבה) — הגוף</h3>
+        <p>22 האותיות הכתובות הן הגוף הפיזי של השפה.</p>
+        <p class="hebrew-quote">
+          כמ"ח אברים ונקשרו בחבלים שהם העצבים והעורקים והגידים והורידים...
+        </p>
+        <p>כמו הגוף המורכב מאברים, כך האותיות הכתובות נקשרות בחבלי תנועה ומערכות.</p>
+      </div>
+
+      <!-- ספר מבטא – נפש -->
+      <div class="layer-card">
+        <h3 class="layer-title">ספר (מבטא) — הנפש</h3>
+        <p>22 האותיות המבוטאות הן הנפש החיה של השפה.</p>
+        <p class="hebrew-quote">
+          הדיבור הנבנה על כ"ב אותיות הוא כח בגוף ואינו גוף.
+        </p>
+        <p>הנפש מניעה את הגוף — כך המבטא מניע את האותיות הכתובות.</p>
+      </div>
+
+      <!-- ספר מחשב – שכל -->
+      <div class="layer-card">
+        <h3 class="layer-title">ספר (מחשב) — השכל</h3>
+        <p>22 האותיות הנחשבות הן השכל המניע של השפה.</p>
+        <p class="hebrew-quote">
+          השכל משיג הנפש והנפש משיגת הגוף.
+        </p>
+        <p>השכל מניע את הנפש — כך החישוב מניע את המבטא והמכתב.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="interlock">
+    <h3>שלושת הספרים מתלכדים</h3>
+    <p>כמו שהאדם אינו שלם אלא בשילוב גוף-נפש-שכל, כך השפה אינה שלמה אלא בשילוב:</p>
+    <p class="hebrew-quote" style="font-size: 1.8rem; margin: 1.5rem 0;">
+      ספר · ספר · ספור
+    </p>
+    <p>מכתב (גוף) + מבטא (נפש) + מחשב (שכל) = שפה חיה</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>נוצר מתוך השיחה על האותיות, הספרים והמטאפיזיקה של השפה</p>
+</footer>
+
+</body>
+</html>
