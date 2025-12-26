@@ -4,6 +4,7 @@
   grid-template-columns: repeat(2, max-content) 1fr repeat(5, max-content);
   justify-items: right;
   align-items: center;
+  gap: 2px;
   padding: 3px 5px 0px 5px;
   border-bottom: 1px solid var(--ctx-border);
   background-color: var(--fg-color);
