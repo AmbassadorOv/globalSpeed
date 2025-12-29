@@ -64,7 +64,10 @@ export function Filter(props: FilterProps) {
     <SliderPlus
         label={<>
           {gvar.gsm.filter[entry.name]}
-          {!props.syncChange ? null : <button onClick={() => props.syncChange()} style={{padding: "0px 5px", marginLeft: "10px"}} className={`toggle ${props.syncValue ? "active" : ""}`}>:</button>}
+          {!props.syncChange ? null : <button
+            aria-label="Toggle sync scale"
+            title="Toggle sync scale"
+            onClick={() => props.syncChange()} style={{padding: "0px 5px", marginLeft: "10px"}} className={`toggle ${props.syncValue ? "active" : ""}`}>:</button>}
         </>}
         value={entry.value ?? ref.default}
         sliderMin={ref.sliderMin}
