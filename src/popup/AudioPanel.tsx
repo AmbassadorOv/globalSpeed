@@ -46,6 +46,7 @@ export function AudioPanel(props: {}) {
       {/* Split */}
       <button 
         className={`toggle ${view.audioFxAlt ? "active" : ""}`}
+        title={gvar.gsm.audio.split}
         onClick={() => {
           setView(produce(view, d => {
             d.audioFxAlt = d.audioFxAlt ? null : structuredClone(view.audioFx || getDefaultAudioFx())
@@ -56,6 +57,7 @@ export function AudioPanel(props: {}) {
       {/* Mono */}
       <button 
         className={`toggle ${view.monoOutput ? "active" : ""}`}
+        title={gvar.gsm.command.afxMono}
         onClick={() => {
           setView(produce(view, d => {
             d.monoOutput = !d.monoOutput
@@ -147,7 +149,10 @@ export function AudioPanel(props: {}) {
       label={<div>
         <MdAccessTime size="1.42rem"/>
         <span style={{marginLeft: "10px"}}>{gvar.gsm.command.afxDelay}</span>
-        <button style={{marginLeft: "10px"}} className={`toggle ${starAudioFx.delayMerge ? "active" : ""}`} onClick={e => {
+        <button
+          aria-label="Merge delay for both channels"
+          title="Merge delay for both channels"
+          style={{marginLeft: "10px"}} className={`toggle ${starAudioFx.delayMerge ? "active" : ""}`} onClick={e => {
           setView(produce(view, d => {
             d[starKey].delayMerge = !starAudioFx.delayMerge
             if(d[starKey].delayMerge) feedbackText(gvar.gsm.token.mergeBoth, domRectGetOffset((e.currentTarget as any as HTMLButtonElement).getBoundingClientRect(), 8, 30))

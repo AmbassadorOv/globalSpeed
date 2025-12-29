@@ -24,14 +24,20 @@ export function EqualizerControl(props: EqualizerControlProps) {
     <div className="controls">
 
       {/* Status */}
-      <button className={eq.enabled ? "active" : "muted"} onClick={e => {
+      <button
+        aria-label="Toggle equalizer"
+        title="Toggle equalizer"
+        className={eq.enabled ? "active" : "muted"} onClick={e => {
         props.onChange(produce(eq, d => {
           d.enabled = !d.enabled
         }))
       }}><FaPowerOff size={"1.07rem"}/></button>
 
       {/* Reset */}
-      <button onClick={e => {
+      <button
+        aria-label="Reset equalizer"
+        title="Reset equalizer"
+        onClick={e => {
         props.onChange(produce(eq, d => {
          return getDefaultEq()
         }))
