@@ -49,6 +49,7 @@ export function Header(props: HeaderProps) {
       {/* Status */}
       <button
         aria-label="Toggle extension"
+        title={gvar.gsm.token.toggleExtensionTooltip}
         className={view.enabled ? "active" : "muted"}
         onClick={() => {
           setView({enabled: !view.enabled, latestViaShortcut: false})
@@ -91,6 +92,7 @@ export function Header(props: HeaderProps) {
       {props.panel !== 0 ? (
         <button
           aria-label="Go back"
+          title={gvar.gsm.token.goBackTooltip}
           onClick={e => props.setPanel(0)}
         >
           <GoArrowLeft size="1.42rem"/>
@@ -98,16 +100,24 @@ export function Header(props: HeaderProps) {
       ) : <div className="noPadding"/>}
 
       {/* Options page */}
-      <button aria-label="Open options page" onClick={e => {
-        chrome.runtime.openOptionsPage()
-      }}>
+      <button
+        aria-label="Open options page"
+        title={gvar.gsm.token.optionsTooltip}
+        onClick={e => {
+          chrome.runtime.openOptionsPage()
+        }}
+      >
         <Gear size="1.42rem"/>
       </button>
 
       {/* Github */}
-      <button aria-label="Open GitHub page" onClick={e => {
-        window.open("https://github.com/polywock/globalSpeed", "_blank")
-      }}>
+      <button
+        aria-label="Open GitHub page"
+        title={gvar.gsm.token.githubTooltip}
+        onClick={e => {
+          window.open("https://github.com/polywock/globalSpeed", "_blank")
+        }}
+      >
         <FaGithub size="1.28rem"/>
       </button>
       

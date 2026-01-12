@@ -18,7 +18,12 @@
     "reset": "reset",
     "duplicate": "duplicate",
 
+    "toggleExtensionTooltip": "Toggle extension",
     "pinTooltip": "Pin if you want current tab to have it's own context (speed, filters, etc).",
+    "goBackTooltip": "Go back",
+    "optionsTooltip": "Open options page",
+    "githubTooltip": "Open GitHub page",
+
     "mergeBoth": "merge both",
     "min": "min",
     "max": "max",
