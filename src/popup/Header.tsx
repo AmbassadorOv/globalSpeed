@@ -49,6 +49,7 @@ export function Header(props: HeaderProps) {
       {/* Status */}
       <button
         aria-label="Toggle extension"
+        title="Toggle extension"
         className={view.enabled ? "active" : "muted"}
         onClick={() => {
           setView({enabled: !view.enabled, latestViaShortcut: false})
@@ -65,6 +66,7 @@ export function Header(props: HeaderProps) {
       {/* Pin */}
       <button
         aria-label={gvar.gsm.token.pinTooltip}
+        title={gvar.gsm.token.pinTooltip}
         className={`pin ${view.isPinned ? "active" : "muted"}`}
         onClick={() => clearPin()}
         onContextMenu={e => clearPin(e)}
@@ -91,6 +93,7 @@ export function Header(props: HeaderProps) {
       {props.panel !== 0 ? (
         <button
           aria-label="Go back"
+          title="Go back"
           onClick={e => props.setPanel(0)}
         >
           <GoArrowLeft size="1.42rem"/>
@@ -98,14 +101,14 @@ export function Header(props: HeaderProps) {
       ) : <div className="noPadding"/>}
 
       {/* Options page */}
-      <button aria-label="Open options page" onClick={e => {
+      <button title="Open options page" aria-label="Open options page" onClick={e => {
         chrome.runtime.openOptionsPage()
       }}>
         <Gear size="1.42rem"/>
       </button>
 
       {/* Github */}
-      <button aria-label="Open GitHub page" onClick={e => {
+      <button title="Open GitHub page" aria-label="Open GitHub page" onClick={e => {
         window.open("https://github.com/polywock/globalSpeed", "_blank")
       }}>
         <FaGithub size="1.28rem"/>
@@ -136,6 +139,7 @@ export function FxIcon(props: FxIconProps) {
   return (
     <button
       aria-label="Toggle video filters"
+      title="Toggle video filters"
       className={`beat ${fxActive ? "active" : ""}`} 
       onClick={e => props.onClick()}
       onContextMenu={e => {
@@ -159,6 +163,7 @@ export function AudioIcon(props: AudioIconProps) {
   return (
     <button
       aria-label="Toggle audio effects"
+      title="Toggle audio effects"
       className={`beat ${status ? "active" : ""}`} 
       onClick={props.onClick}
       onContextMenu={e => {
@@ -188,6 +193,7 @@ export function CircleIcon(props: CircleIconProps) {
   return (
     <button
       aria-label="Toggle circle widget"
+      title="Toggle circle widget"
       className={`beat ${props.active ? "active" : ""}`} 
       onContextMenu={e => {
         e.preventDefault()
