@@ -77,13 +77,13 @@ export function SpeedControl(props: SpeedControlProps) {
     const speedDelta = (e.deltaY / 1080) * -0.15
     props.onChange(clamp(MIN_SPEED_CHROMIUM, MAX_SPEED_CHROMIUM, props.speed + speedDelta))
   }}>
-      <button onClick={() =>  handleAddDelta(-largeStep)}><FaAngleDoubleLeft size={"1.14rem"}/></button>
-      <button onClick={() =>  handleAddDelta(-smallStep)}><FaAngleLeft size={"1.14rem"}/></button>
+      <button aria-label="Decrease speed (large step)" title="Decrease speed (large step)" onClick={() =>  handleAddDelta(-largeStep)}><FaAngleDoubleLeft size={"1.14rem"}/></button>
+      <button aria-label="Decrease speed (small step)" title="Decrease speed (small step)" onClick={() =>  handleAddDelta(-smallStep)}><FaAngleLeft size={"1.14rem"}/></button>
       <NumericInput rounding={2} noNull={true} min={MIN_SPEED_CHROMIUM} max={MAX_SPEED_CHROMIUM} value={props.speed} onChange={v => {
         props.onChange(v)
       }}/>
-      <button onClick={() =>  handleAddDelta(smallStep)}><FaAngleRight size={"1.14rem"}/></button>
-      <button onMouseDown={() => {}} onClick={() =>  handleAddDelta(largeStep)}><FaAngleDoubleRight size={"1.14rem"}/></button>
+      <button aria-label="Increase speed (small step)" title="Increase speed (small step)" onClick={() =>  handleAddDelta(smallStep)}><FaAngleRight size={"1.14rem"}/></button>
+      <button aria-label="Increase speed (large step)" title="Increase speed (large step)" onMouseDown={() => {}} onClick={() =>  handleAddDelta(largeStep)}><FaAngleDoubleRight size={"1.14rem"}/></button>
     </div>
 
     {/* Slider */}
