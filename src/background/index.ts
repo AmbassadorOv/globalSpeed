@@ -15,6 +15,7 @@ import { findMatchingKeybindsContext, findMatchingKeybindsGlobal, testURL } from
 import { loadGsm } from "src/utils/gsm"
 import { clearClosed } from "./utils/getAutoMedia"
 import { syncContextMenu, syncContextMenuDeb } from "src/utils/contextMenus"
+import { jules_engine } from "src/utils/integrity"
 import { MediaEvent } from "src/contentScript/isolated/utils/applyMediaEvent"
 
 
@@ -28,6 +29,13 @@ declare global {
 ;(globalThis as any).gvar = gvar 
 
 async function onInstallAsync() {
+    // Initialize Jules Sovereign Engine v1.0 [cite: 2026-01-14]
+    jules_engine.extractTruth(
+        "Full Ramchal Library (Higgayon, Melitzah, Tevunot, Agadot) Synchronized",
+        "Sovereign_Command",
+        "D_FINAL_PATCH"
+    ).catch(console.error)
+
     let stateView: State 
     try {        
         let config = await dumpConfig()
