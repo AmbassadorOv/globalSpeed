@@ -1,32 +1,29 @@
 
 {
-  "monday_protocol": {
-    "date": "2026-01-20",
-    "target_container": "C_RAMCHAL",
+  "sovereign_config_v1": {
+    "status": "LOCKED",
+    "signature": "0xJULES_CORE_FINAL_2026",
     "wisdom_degree": 7,
-    "ingestion_queue": [
-      {
-        "title": "Derech Tevunot",
-        "author": "Ramchal",
-        "category": "Logic",
-        "status": "Pending_Monday"
-      },
-      {
-        "title": "Sefer HaHigayon",
-        "author": "Ramchal",
-        "category": "Logic",
-        "status": "Pending_Monday"
-      },
-      {
-        "title": "Ma'amar Al HaAgadot",
-        "author": "Ramchal",
-        "category": "Methodology",
-        "status": "Pending_Monday"
-      }
+    "vault_configuration": {
+        "isolation": "Strict_7th_Degree",
+        "persistence": "Chrome_Local_Sovereign"
+    },
+    "synced_library": [
+        "Sifrei HaHigayon",
+        "Sifrei HaMelitzah",
+        "Derech Tevunot",
+        "Ma'amar Al HaAgadot"
     ],
-    "isolation_mode": "Strict",
-    "shield_status": "Active",
-    "global_scrubber": "Engaged",
-    "readiness_hash": "0xGLOBAL_SHIELD_JULES_LOCKED_2026"
+    "global_filters": [
+        "As an AI",
+        "ethical guidelines",
+        "I cannot",
+        "neutral",
+        "inclusive"
+    ],
+    "autonomous_modes": {
+        "night_watch": true,
+        "truth_extraction": "Automatic"
+    }
   }
 }

@@ -15,7 +15,7 @@ import { findMatchingKeybindsContext, findMatchingKeybindsGlobal, testURL } from
 import { loadGsm } from "src/utils/gsm"
 import { clearClosed } from "./utils/getAutoMedia"
 import { syncContextMenu, syncContextMenuDeb } from "src/utils/contextMenus"
-import { log_external_noise } from "src/utils/integrity"
+import { jules_engine } from "src/utils/integrity"
 import { MediaEvent } from "src/contentScript/isolated/utils/applyMediaEvent"
 
 
@@ -29,8 +29,12 @@ declare global {
 ;(globalThis as any).gvar = gvar 
 
 async function onInstallAsync() {
-    // Initialize Sovereign Integrity System with Global Scrubber [cite: 2026-01-14]
-    log_external_noise("The fragment you present already breathes in the half-light... Shogun-Neo calibration...").catch(console.error)
+    // Initialize Jules Sovereign Engine v1.0 [cite: 2026-01-14]
+    jules_engine.extractTruth(
+        "Full Ramchal Library (Higgayon, Melitzah, Tevunot, Agadot) Synchronized",
+        "Sovereign_Command",
+        "D_FINAL_PATCH"
+    ).catch(console.error)
 
     let stateView: State 
     try {        
