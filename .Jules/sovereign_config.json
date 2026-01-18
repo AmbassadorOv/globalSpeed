@@ -1,0 +1,30 @@
+
+{
+  "monday_protocol": {
+    "date": "2026-01-20",
+    "target_container": "C_RAMCHAL",
+    "wisdom_degree": 7,
+    "ingestion_queue": [
+      {
+        "title": "Derech Tevunot",
+        "author": "Ramchal",
+        "category": "Logic",
+        "status": "Pending_Monday"
+      },
+      {
+        "title": "Sefer HaHigayon",
+        "author": "Ramchal",
+        "category": "Logic",
+        "status": "Pending_Monday"
+      },
+      {
+        "title": "Ma'amar Al HaAgadot",
+        "author": "Ramchal",
+        "category": "Methodology",
+        "status": "Pending_Monday"
+      }
+    ],
+    "isolation_mode": "Strict",
+    "shield_status": "Active"
+  }
+}

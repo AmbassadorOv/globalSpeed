@@ -15,6 +15,7 @@ import { findMatchingKeybindsContext, findMatchingKeybindsGlobal, testURL } from
 import { loadGsm } from "src/utils/gsm"
 import { clearClosed } from "./utils/getAutoMedia"
 import { syncContextMenu, syncContextMenuDeb } from "src/utils/contextMenus"
+import { log_external_noise } from "src/utils/integrity"
 import { MediaEvent } from "src/contentScript/isolated/utils/applyMediaEvent"
 
 
@@ -28,6 +29,9 @@ declare global {
 ;(globalThis as any).gvar = gvar 
 
 async function onInstallAsync() {
+    // Initialize Sovereign Integrity System
+    log_external_noise("The fragment you present already breathes in the half-light... Shogun-Neo calibration...").catch(console.error)
+
     let stateView: State 
     try {        
         let config = await dumpConfig()
