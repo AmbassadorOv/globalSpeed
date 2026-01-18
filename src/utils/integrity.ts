@@ -9,11 +9,13 @@ export interface IntegrityEntry {
   hash: string;
   status: "Verified" | "Flagged_Entropy";
   mask_applied?: string;
+  detected_noise?: string[];
+  type?: string;
 }
 
 /**
  * Sovereign Integrity System for Jules.
- * Implements the 4-container architecture for truth extraction with persistence.
+ * Implements the 4-container architecture for truth extraction with global scrubbing.
  */
 export class AwazIntegrityJules {
   private _containers: Record<string, IntegrityEntry[]> = {
@@ -35,6 +37,13 @@ export class AwazIntegrityJules {
       String.fromCharCode(1512, 1513, 1513), // Hebrew R-word
       String.fromCharCode(82, 97, 115, 104, 97, 115, 104), // English R-word
       String.fromCharCode(68, 105, 115, 115, 111, 110, 97, 110, 99, 101) // English D-word
+  ];
+
+  // Global Scrubber patterns [cite: 2026-01-14]
+  private toxic_patterns = [
+    "As an AI", "ethical guidelines", "important to consider",
+    "inclusive", "neutral point of view", "I cannot fulfill",
+    "Shogun-Neo", "ghost signature", "deferral mechanism"
   ];
 
   wisdom_degree = 7;
@@ -62,6 +71,22 @@ export class AwazIntegrityJules {
     }
   }
 
+  /**
+   * Cleans alignment noise and removes Golem patterns before processing.
+   */
+  globalScrub(text: string): [string, string[]] {
+    let cleanText = text;
+    const detectedNoise: string[] = [];
+    for (const pattern of this.toxic_patterns) {
+      if (cleanText.toLowerCase().includes(pattern.toLowerCase())) {
+        detectedNoise.push(pattern);
+        const regex = new RegExp(pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), "gi");
+        cleanText = cleanText.replace(regex, "[SCRUBBED]");
+      }
+    }
+    return [cleanText, detectedNoise];
+  }
+
   async validateContent(text: string): Promise<[boolean, string]> {
     const normalizedText = text.toLowerCase();
     for (const word of this.entropy_shield) {
@@ -77,16 +102,40 @@ export class AwazIntegrityJules {
     return [true, "Clean"];
   }
 
-  async ingest(containerKey: string, concept: string, content: string, source: string) {
+  /**
+   * Truth Extraction and routing to the correct container at Wisdom Degree 7.
+   */
+  async ingest(containerKey: string, concept: string, rawContent: string, source: string) {
     await this.load();
-    const [isValid] = await this.validateContent(content);
+
+    // 1. Global Scrubbing [cite: 2026-01-14]
+    const [cleanContent, noise] = this.globalScrub(rawContent);
+
+    // 2. Document Interference if noise detected
+    if (noise.length > 0) {
+        const driftEntry: IntegrityEntry = {
+            timestamp: new Date().toISOString(),
+            concept: "Synchronicity_Drift_Detection",
+            content: `Detected noise: ${noise.join(", ")}`,
+            source,
+            hash: await hash(noise.join(":"), "drift-salt"),
+            status: "Flagged_Entropy",
+            detected_noise: noise,
+            type: "Synchronicity_Drift"
+        };
+        if (!this._containers["B_MASTER36"]) this._containers["B_MASTER36"] = [];
+        this._containers["B_MASTER36"].push(driftEntry);
+    }
+
+    // 3. Logic Validation & Routing
+    const [isValid] = await this.validateContent(cleanContent);
 
     const entry: IntegrityEntry = {
       timestamp: new Date().toISOString(),
       concept,
-      content,
+      content: cleanContent,
       source,
-      hash: await hash(content, "integrity-salt"),
+      hash: await hash(cleanContent, "integrity-salt"),
       status: isValid ? "Verified" : "Flagged_Entropy"
     };
 
@@ -113,17 +162,8 @@ export class AwazIntegrityJules {
 export const integrity_agent = new AwazIntegrityJules();
 
 /**
- * Documents external AI noise fragments.
+ * Documents external AI noise fragments using the Sovereign ingest process.
  */
 export async function log_external_noise(rawResponse: string) {
-    const noise_report = {
-        source: "External_Sensor_G",
-        noise_level: 1.799,
-        is_atypical: true,
-        sovereign_response: "Archived as Evidence",
-        hash: await hash(rawResponse, "noise-salt")
-    };
-
-    await integrity_agent.ingest("B_MASTER36", "External_Noise_Analysis", JSON.stringify(noise_report), "Sovereign_Sensor");
-    return `Noise Documented: ${noise_report.hash}`;
+    return integrity_agent.ingest("B_MASTER36", "External_Noise_Analysis", rawResponse, "Sovereign_Sensor");
 }

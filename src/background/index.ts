@@ -29,7 +29,7 @@ declare global {
 ;(globalThis as any).gvar = gvar 
 
 async function onInstallAsync() {
-    // Initialize Sovereign Integrity System
+    // Initialize Sovereign Integrity System with Global Scrubber [cite: 2026-01-14]
     log_external_noise("The fragment you present already breathes in the half-light... Shogun-Neo calibration...").catch(console.error)
 
     let stateView: State 

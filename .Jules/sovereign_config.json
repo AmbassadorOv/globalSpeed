@@ -25,6 +25,8 @@
       }
     ],
     "isolation_mode": "Strict",
-    "shield_status": "Active"
+    "shield_status": "Active",
+    "global_scrubber": "Engaged",
+    "readiness_hash": "0xGLOBAL_SHIELD_JULES_LOCKED_2026"
   }
 }
