@@ -13,6 +13,7 @@ import { getCorrectPane, getLatestActiveTabInfo, tabToTabInfo } from "src/utils/
 import { ProcessKeybinds, setValue, type SetValueInit } from "./utils/processKeybinds"
 import { findMatchingKeybindsContext, findMatchingKeybindsGlobal, testURL } from "src/utils/configUtils"
 import { loadGsm } from "src/utils/gsm"
+import { SovereignIntegritySystem } from "src/utils/integrity"
 import { clearClosed } from "./utils/getAutoMedia"
 import { syncContextMenu, syncContextMenuDeb } from "src/utils/contextMenus"
 import { MediaEvent } from "src/contentScript/isolated/utils/applyMediaEvent"
@@ -42,6 +43,7 @@ async function onInstallAsync() {
     stateView = stateView || getDefaultState()
 
     await restoreConfig(stateView)
+    await SovereignIntegritySystem.initialize()
     delete gvar.installPromise
 }
 
