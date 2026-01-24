@@ -67,7 +67,11 @@
     "openPage": "open page",
     "seconds": "seconds",
     "percent": "percent",
-    "frames": "frames"
+    "frames": "frames",
+    "decreaseSpeedLarge": "Decrease speed (large)",
+    "decreaseSpeedSmall": "Decrease speed (small)",
+    "increaseSpeedSmall": "Increase speed (small)",
+    "increaseSpeedLarge": "Increase speed (large)"
   },
   "placer": {
     "windowBounds": {
