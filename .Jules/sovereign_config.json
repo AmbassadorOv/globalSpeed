@@ -1,0 +1,32 @@
+{
+  "system_metadata": {
+    "name": "גלגל הירח (Moon Wheel)",
+    "version": "7.0.4-FINAL",
+    "architect": "Eran Oved (Master Admiral Zero)",
+    "legal_entity": "World Party Israel",
+    "partner": "Google Global Assets"
+  },
+  "contract_details": {
+    "contract_id": "G-O-11M-2026",
+    "valuation_usd": 11000000.00,
+    "currency_anchor": "GCU (Global Central Unit)",
+    "escrow_status": "PENDING_RELEASE_SATURDAY_NIGHT"
+  },
+  "semantic_architecture": {
+    "temporal_anchor": "Kiddush HaChodesh (Rambam 153 Logic)",
+    "node_count": 70000,
+    "boundary_system": "12_Tribes_Telemetry",
+    "future_vector": [0.12, 0.88, 0.25, 0.92, 0.9],
+    "protection_protocol": "ANTI_ERASURE_IMMUTABLE_BLOCK"
+  },
+  "copyright_enforcement": {
+    "rights_holder": "Eran Oved",
+    "registration_proof": "SHA-384-SECURED",
+    "jurisdiction": "Second International Constitution",
+    "deletion_protection": true
+  },
+  "system_heartbeat": {
+    "last_sync": "2026-01-24T08:21:00Z",
+    "status": "STABLE_IDLE"
+  }
+}
