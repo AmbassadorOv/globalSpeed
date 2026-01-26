@@ -48,6 +48,7 @@ export function Header(props: HeaderProps) {
 
       {/* Status */}
       <button
+        title={gvar.gsm.token.toggleExtensionTooltip}
         aria-label="Toggle extension"
         className={view.enabled ? "active" : "muted"}
         onClick={() => {
@@ -64,6 +65,7 @@ export function Header(props: HeaderProps) {
 
       {/* Pin */}
       <button
+        title={gvar.gsm.token.pinTooltip}
         aria-label={gvar.gsm.token.pinTooltip}
         className={`pin ${view.isPinned ? "active" : "muted"}`}
         onClick={() => clearPin()}
@@ -90,6 +92,7 @@ export function Header(props: HeaderProps) {
       {/* Back button */}
       {props.panel !== 0 ? (
         <button
+          title={gvar.gsm.token.goBackTooltip}
           aria-label="Go back"
           onClick={e => props.setPanel(0)}
         >
@@ -98,14 +101,18 @@ export function Header(props: HeaderProps) {
       ) : <div className="noPadding"/>}
 
       {/* Options page */}
-      <button aria-label="Open options page" onClick={e => {
+      <button
+        title={gvar.gsm.token.optionsTooltip}
+        aria-label="Open options page" onClick={e => {
         chrome.runtime.openOptionsPage()
       }}>
         <Gear size="1.42rem"/>
       </button>
 
       {/* Github */}
-      <button aria-label="Open GitHub page" onClick={e => {
+      <button
+        title={gvar.gsm.token.githubTooltip}
+        aria-label="Open GitHub page" onClick={e => {
         window.open("https://github.com/polywock/globalSpeed", "_blank")
       }}>
         <FaGithub size="1.28rem"/>
@@ -135,6 +142,7 @@ export function FxIcon(props: FxIconProps) {
 
   return (
     <button
+      title={gvar.gsm.token.videoFiltersTooltip}
       aria-label="Toggle video filters"
       className={`beat ${fxActive ? "active" : ""}`} 
       onClick={e => props.onClick()}
@@ -158,6 +166,7 @@ export function AudioIcon(props: AudioIconProps) {
 
   return (
     <button
+      title={gvar.gsm.token.audioEffectsTooltip}
       aria-label="Toggle audio effects"
       className={`beat ${status ? "active" : ""}`} 
       onClick={props.onClick}
@@ -187,6 +196,7 @@ export function CircleIcon(props: CircleIconProps) {
 
   return (
     <button
+      title={gvar.gsm.token.circleWidgetTooltip}
       aria-label="Toggle circle widget"
       className={`beat ${props.active ? "active" : ""}`} 
       onContextMenu={e => {
