@@ -29,8 +29,8 @@ export function Header(props: HeaderProps) {
 
   const clearPin = async (e?: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e?.preventDefault()
-    if (e && !view.isPinned) return 
-    // If pinning, assume user wants the Orl overrides. 
+    if (e && !view.isPinned) return
+    // If pinning, assume user wants the Orl overrides.
     let orlTransfer: AnyDict = {}
     if (!view.isPinned) {
       const incipit = `r:${gvar.tabInfo.tabId}:`
@@ -48,7 +48,8 @@ export function Header(props: HeaderProps) {
 
       {/* Status */}
       <button
-        aria-label="Toggle extension"
+        aria-label={gvar.gsm.token.toggleExtension}
+        title={gvar.gsm.token.toggleExtension}
         className={view.enabled ? "active" : "muted"}
         onClick={() => {
           setView({enabled: !view.enabled, latestViaShortcut: false})
@@ -65,6 +66,7 @@ export function Header(props: HeaderProps) {
       {/* Pin */}
       <button
         aria-label={gvar.gsm.token.pinTooltip}
+        title={gvar.gsm.token.pinTooltip}
         className={`pin ${view.isPinned ? "active" : "muted"}`}
         onClick={() => clearPin()}
         onContextMenu={e => clearPin(e)}
@@ -98,19 +100,25 @@ export function Header(props: HeaderProps) {
       ) : <div className="noPadding"/>}
 
       {/* Options page */}
-      <button aria-label="Open options page" onClick={e => {
+      <button
+        aria-label={gvar.gsm.token.openOptionsPage}
+        title={gvar.gsm.token.openOptionsPage}
+        onClick={e => {
         chrome.runtime.openOptionsPage()
       }}>
         <Gear size="1.42rem"/>
       </button>
 
       {/* Github */}
-      <button aria-label="Open GitHub page" onClick={e => {
+      <button
+        aria-label={gvar.gsm.token.openGitHubPage}
+        title={gvar.gsm.token.openGitHubPage}
+        onClick={e => {
         window.open("https://github.com/polywock/globalSpeed", "_blank")
       }}>
         <FaGithub size="1.28rem"/>
       </button>
-      
+
     </div>
   )
 }
@@ -119,7 +127,7 @@ export function Header(props: HeaderProps) {
 
 type FxIconProps = {
   onClick: () => void,
-  enabled: boolean 
+  enabled: boolean
 }
 
 export function FxIcon(props: FxIconProps) {
@@ -127,16 +135,17 @@ export function FxIcon(props: FxIconProps) {
 
   const fxActive = useMemo(() => {
     if (view && props.enabled) {
-      if (view.backdropFx?.enabled && (checkFilterDeviation(view.backdropFx.filters) ||checkFilterDeviation(view.backdropFx.transforms))) return true 
-      if (view.elementFx?.enabled && (checkFilterDeviation(view.elementFx.filters) ||checkFilterDeviation(view.elementFx.transforms))) return true 
+      if (view.backdropFx?.enabled && (checkFilterDeviation(view.backdropFx.filters) ||checkFilterDeviation(view.backdropFx.transforms))) return true
+      if (view.elementFx?.enabled && (checkFilterDeviation(view.elementFx.filters) ||checkFilterDeviation(view.elementFx.transforms))) return true
     }
-    return false 
+    return false
   }, [props.enabled, view])
 
   return (
     <button
-      aria-label="Toggle video filters"
-      className={`beat ${fxActive ? "active" : ""}`} 
+      aria-label={gvar.gsm.token.toggleVideoFilters}
+      title={gvar.gsm.token.toggleVideoFilters}
+      className={`beat ${fxActive ? "active" : ""}`}
       onClick={e => props.onClick()}
       onContextMenu={e => {
         e.preventDefault()
@@ -158,8 +167,9 @@ export function AudioIcon(props: AudioIconProps) {
 
   return (
     <button
-      aria-label="Toggle audio effects"
-      className={`beat ${status ? "active" : ""}`} 
+      aria-label={gvar.gsm.token.toggleAudioEffects}
+      title={gvar.gsm.token.toggleAudioEffects}
+      className={`beat ${status ? "active" : ""}`}
       onClick={props.onClick}
       onContextMenu={e => {
         e.preventDefault()
@@ -187,8 +197,9 @@ export function CircleIcon(props: CircleIconProps) {
 
   return (
     <button
-      aria-label="Toggle circle widget"
-      className={`beat ${props.active ? "active" : ""}`} 
+      aria-label={gvar.gsm.token.toggleCircleWidget}
+      title={gvar.gsm.token.toggleCircleWidget}
+      className={`beat ${props.active ? "active" : ""}`}
       onContextMenu={e => {
         e.preventDefault()
         pushView({override: {
