@@ -1,6 +1,6 @@
 {
   "_scale": 1.0,
-  "_lang": "en", 
+  "_lang": "en",
   "audio": {
     "captureTab": "capture",
     "releaseTab": "release",
@@ -18,22 +18,29 @@
     "reset": "reset",
     "duplicate": "duplicate",
 
+    "toggleExtension": "Toggle extension",
+    "openOptionsPage": "Open options page",
+    "openGitHubPage": "Open GitHub page",
+    "toggleVideoFilters": "Toggle video filters",
+    "toggleAudioEffects": "Toggle audio effects",
+    "toggleCircleWidget": "Toggle circle widget",
+
     "pinTooltip": "Pin if you want current tab to have it's own context (speed, filters, etc).",
     "mergeBoth": "merge both",
     "min": "min",
     "max": "max",
-    
+
     "on": "on",
     "off": "off",
     "toggle": "toggle",
-    
+
     "element": "element",
     "backdrop": "backdrop",
     "both": "both",
-    
+
     "query": "query",
     "queryTooltip": "CSS selector used to find elements to filter. For example, 'video, img' will select both videos and images. For advanced usage, view documentation online about CSS selectors.",
-    
+
     "intoPane": "into pane",
     "warning": "warning",
     "filters": "filters",
