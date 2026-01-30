@@ -19,6 +19,13 @@
     "duplicate": "duplicate",
 
     "pinTooltip": "Pin if you want current tab to have it's own context (speed, filters, etc).",
+    "toggleExtension": "Toggle extension",
+    "goBack": "Go back",
+    "openOptions": "Open options page",
+    "openGithub": "Open GitHub page",
+    "toggleFilters": "Toggle video filters",
+    "toggleAudioEffects": "Toggle audio effects",
+    "toggleCircleWidget": "Toggle circle widget",
     "mergeBoth": "merge both",
     "min": "min",
     "max": "max",
