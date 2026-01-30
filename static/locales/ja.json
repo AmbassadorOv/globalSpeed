@@ -65,7 +65,7 @@
     "openPage": "ページを開く",
     "seconds": "秒",
     "percent": "%",
-    "frames": "フレーム"
+    "frames": "フレーム", "back": "back", "github": "GitHub", "extension": "extension"
   },
   "placer": {
     "windowBounds": {

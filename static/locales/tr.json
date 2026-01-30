@@ -67,7 +67,7 @@
     "openPage": "sayfayı aç",
     "seconds": "sn",
     "percent": "%",
-    "frames": "kare"
+    "frames": "kare", "back": "back", "github": "GitHub", "extension": "extension"
   },
   "placer": {
     "windowBounds": {

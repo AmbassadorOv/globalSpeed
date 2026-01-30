@@ -66,7 +66,7 @@
     "openPage": "페이지 열기",
     "seconds": "초",
     "percent": "%",
-    "frames": "프레임"
+    "frames": "프레임", "back": "back", "github": "GitHub", "extension": "extension"
   },
   "placer": {
     "windowBounds": {

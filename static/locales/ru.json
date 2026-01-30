@@ -67,7 +67,7 @@
     "openPage": "открыть страницу",
     "seconds": "секунды",
     "percent": "проценты",
-    "frames": "кадры"
+    "frames": "кадры", "back": "back", "github": "GitHub", "extension": "extension"
   },
   "placer": {
     "windowBounds": {

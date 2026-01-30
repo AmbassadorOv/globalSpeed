@@ -64,7 +64,14 @@ export function ReverseButton(props: ReverseButtonProps) {
   }
 
   return (
-    <button className={`ReverseButton ${status == null ? "" : (status ? "playing" : "recording")}`} onPointerDown={onPointerDown}>{status == null ? gvar.gsm.audio.reverse : (status ? <FaVolumeUp size="1em"/> : <FaMicrophone size="1em"/>)}</button>
+    <button
+      className={`ReverseButton ${status == null ? "" : (status ? "playing" : "recording")}`}
+      onPointerDown={onPointerDown}
+      aria-label={gvar.gsm.audio.reverse}
+      title={gvar.gsm.audio.reverse}
+    >
+      {status == null ? gvar.gsm.audio.reverse : (status ? <FaVolumeUp size="1em"/> : <FaMicrophone size="1em"/>)}
+    </button>
   )
 }
 

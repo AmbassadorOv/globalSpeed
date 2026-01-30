@@ -68,7 +68,7 @@
     "openPage": "打开页面",
     "seconds": "秒",
     "percent": "%",
-    "frames": "帧"
+    "frames": "帧", "back": "back", "github": "GitHub", "extension": "extension"
   },
   "placer": {
     "windowBounds": {

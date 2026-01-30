@@ -65,7 +65,7 @@
     "openPage": "abrir página",
     "seconds": "segundos",
     "percent": "por ciento",
-    "frames": "fotogramas"
+    "frames": "fotogramas", "back": "back", "github": "GitHub", "extension": "extension"
   },
   "placer": {
     "windowBounds": {
