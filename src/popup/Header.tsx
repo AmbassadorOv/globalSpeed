@@ -48,7 +48,8 @@ export function Header(props: HeaderProps) {
 
       {/* Status */}
       <button
-        aria-label="Toggle extension"
+        aria-label={gvar.gsm.token.toggleExtension}
+        title={gvar.gsm.token.toggleExtension}
         className={view.enabled ? "active" : "muted"}
         onClick={() => {
           setView({enabled: !view.enabled, latestViaShortcut: false})
@@ -64,7 +65,8 @@ export function Header(props: HeaderProps) {
 
       {/* Pin */}
       <button
-        aria-label={gvar.gsm.token.pinTooltip}
+        aria-label={gvar.gsm.command.pin}
+        title={gvar.gsm.token.pinTooltip}
         className={`pin ${view.isPinned ? "active" : "muted"}`}
         onClick={() => clearPin()}
         onContextMenu={e => clearPin(e)}
@@ -90,7 +92,8 @@ export function Header(props: HeaderProps) {
       {/* Back button */}
       {props.panel !== 0 ? (
         <button
-          aria-label="Go back"
+          aria-label={gvar.gsm.token.back}
+          title={gvar.gsm.token.back}
           onClick={e => props.setPanel(0)}
         >
           <GoArrowLeft size="1.42rem"/>
@@ -98,14 +101,14 @@ export function Header(props: HeaderProps) {
       ) : <div className="noPadding"/>}
 
       {/* Options page */}
-      <button aria-label="Open options page" onClick={e => {
+      <button aria-label={gvar.gsm.token.openOptions} title={gvar.gsm.token.openOptions} onClick={e => {
         chrome.runtime.openOptionsPage()
       }}>
         <Gear size="1.42rem"/>
       </button>
 
       {/* Github */}
-      <button aria-label="Open GitHub page" onClick={e => {
+      <button aria-label={gvar.gsm.token.openGithub} title={gvar.gsm.token.openGithub} onClick={e => {
         window.open("https://github.com/polywock/globalSpeed", "_blank")
       }}>
         <FaGithub size="1.28rem"/>
@@ -135,7 +138,8 @@ export function FxIcon(props: FxIconProps) {
 
   return (
     <button
-      aria-label="Toggle video filters"
+      aria-label={gvar.gsm.token.toggleFilters}
+      title={gvar.gsm.token.toggleFilters}
       className={`beat ${fxActive ? "active" : ""}`} 
       onClick={e => props.onClick()}
       onContextMenu={e => {
@@ -158,7 +162,8 @@ export function AudioIcon(props: AudioIconProps) {
 
   return (
     <button
-      aria-label="Toggle audio effects"
+      aria-label={gvar.gsm.token.toggleAudio}
+      title={gvar.gsm.token.toggleAudio}
       className={`beat ${status ? "active" : ""}`} 
       onClick={props.onClick}
       onContextMenu={e => {
@@ -187,7 +192,8 @@ export function CircleIcon(props: CircleIconProps) {
 
   return (
     <button
-      aria-label="Toggle circle widget"
+      aria-label={gvar.gsm.token.toggleWidget}
+      title={gvar.gsm.token.toggleWidget}
       className={`beat ${props.active ? "active" : ""}`} 
       onContextMenu={e => {
         e.preventDefault()

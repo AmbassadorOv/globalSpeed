@@ -1,6 +1,6 @@
 {
   "_scale": 1.0,
-  "_lang": "en", 
+  "_lang": "en",
   "audio": {
     "captureTab": "capture",
     "releaseTab": "release",
@@ -17,28 +17,22 @@
     "create": "create",
     "reset": "reset",
     "duplicate": "duplicate",
-
     "pinTooltip": "Pin if you want current tab to have it's own context (speed, filters, etc).",
     "mergeBoth": "merge both",
     "min": "min",
     "max": "max",
-    
     "on": "on",
     "off": "off",
     "toggle": "toggle",
-    
     "element": "element",
     "backdrop": "backdrop",
     "both": "both",
-    
     "query": "query",
     "queryTooltip": "CSS selector used to find elements to filter. For example, 'video, img' will select both videos and images. For advanced usage, view documentation online about CSS selectors.",
-    
     "intoPane": "into pane",
     "warning": "warning",
     "filters": "filters",
     "transforms": "transforms",
-
     "blockEvents": "block events",
     "blockEventsTooltip": "Will try to block event propagation and default behaviors.",
     "color": "color",
@@ -58,7 +52,6 @@
     "shrink": "Shrink",
     "implode": "Implode",
     "rotate": "Rotate",
-
     "rows": "rows",
     "copy": "copy",
     "paste": "paste",
@@ -67,7 +60,14 @@
     "openPage": "open page",
     "seconds": "seconds",
     "percent": "percent",
-    "frames": "frames"
+    "frames": "frames",
+    "back": "back",
+    "toggleExtension": "toggle extension",
+    "toggleFilters": "toggle video filters",
+    "toggleAudio": "toggle audio effects",
+    "toggleWidget": "toggle circle widget",
+    "openGithub": "open GitHub page",
+    "openOptions": "open options page"
   },
   "placer": {
     "windowBounds": {
@@ -168,7 +168,6 @@
       "ghostModeTooltip": "Try to block website from changing speed. Disabled by default because it might break some websites.",
       "pinByDefault": "pin by default",
       "pinByDefaultTooltip": "New tabs will automatically be pinned.",
-
       "initialState": "initial state",
       "previousTab": "Previous tab's context.",
       "globalContext": "Global context",
@@ -182,10 +181,8 @@
       "keyboardInputTooltip": "Consider switching to Virtual input mode if using a virtual keyboard or a non-QWERTY layout keyboard. This only applies to future shortcut changes and existing shortcuts won't be affected.",
       "qwerty": "QWERTY layout",
       "virtual": "Virtual",
-
       "grantPermission": "grant permission",
       "grantPermissionTooltip": "To enable full functionality, including embed video support, this permission must be enabled. For limited functionality, you can enable on a site-by-site basis by right clicking the toolbar icon.",
-
       "speedSlider": "speed slider",
       "textSize": "text size",
       "speedPresets": "speed presets",

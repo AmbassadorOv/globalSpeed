@@ -89,12 +89,19 @@ export function SpeedControl(props: SpeedControlProps) {
     {/* Slider */}
     {!!view.speedSlider && (
       <div className="slider">
-        <BsMusicNoteList title={gvar.gsm.command.speedChangesPitch} size={"1.2rem"} className={`${view.freePitch ? "active" : ""}`} onClick={(e: React.MouseEvent<SVGElement>) => {
-          if (!view.freePitch) {
-            feedbackText(gvar.gsm.command.speedChangesPitch, domRectGetOffset((e.currentTarget as any as HTMLButtonElement).getBoundingClientRect(), 8, 30))
-          }
-          setView({freePitch: !view.freePitch})
-        }}/>
+        <button
+          aria-label={gvar.gsm.command.speedChangesPitch}
+          title={gvar.gsm.command.speedChangesPitch}
+          className={`icon ${view.freePitch ? "active" : ""}`}
+          onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+            if (!view.freePitch) {
+              feedbackText(gvar.gsm.command.speedChangesPitch, domRectGetOffset(e.currentTarget.getBoundingClientRect(), 8, 30))
+            }
+            setView({freePitch: !view.freePitch})
+          }}
+        >
+          <BsMusicNoteList size={"1.2rem"} />
+        </button>
         <input step={0.01} type="range" min={view.speedSlider.min} max={view.speedSlider.max} value={props.speed} onChange={e => {
           props.onChange(e.target.valueAsNumber)
         }}/>
