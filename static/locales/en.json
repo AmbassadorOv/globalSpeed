@@ -67,7 +67,10 @@
     "openPage": "open page",
     "seconds": "seconds",
     "percent": "percent",
-    "frames": "frames"
+    "frames": "frames",
+    "back": "back",
+    "github": "GitHub",
+    "extension": "extension"
   },
   "placer": {
     "windowBounds": {
