@@ -67,7 +67,12 @@
     "openPage": "open page",
     "seconds": "seconds",
     "percent": "percent",
-    "frames": "frames"
+    "frames": "frames",
+    "extension": "extension",
+    "audioEffects": "audio effects",
+    "videoFilters": "video filters",
+    "goBack": "go back",
+    "github": "GitHub"
   },
   "placer": {
     "windowBounds": {
