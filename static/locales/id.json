@@ -58,7 +58,12 @@
     "openPage": "buka halaman",
     "seconds": "detik",
     "percent": "persen",
-    "frames": "bingkai"
+    "frames": "bingkai",
+    "extension": "extension",
+    "audioEffects": "audio effects",
+    "videoFilters": "video filters",
+    "goBack": "go back",
+    "github": "GitHub"
   },
   "placer": {
     "windowBounds": {

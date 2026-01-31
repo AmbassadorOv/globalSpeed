@@ -11,9 +11,11 @@ body {
 
 #SuperDisable {
   padding: 10px;
-  background-color: #fafafa; 
-  color: #666; 
+  background-color: var(--fg-color);
+  color: var(--header-icon-color);
   cursor: pointer;
+  border: none;
+  width: 100%;
 }
 
 #App {
