@@ -18,6 +18,14 @@
     "reset": "reset",
     "duplicate": "duplicate",
 
+    "toggleExtension": "toggle extension",
+    "toggleAudio": "toggle audio effects",
+    "toggleFilters": "toggle video filters",
+    "goBack": "go back",
+    "openOptions": "open options page",
+    "openGithub": "open GitHub page",
+    "toggleCircle": "toggle circle widget",
+
     "pinTooltip": "Pin if you want current tab to have it's own context (speed, filters, etc).",
     "mergeBoth": "merge both",
     "min": "min",

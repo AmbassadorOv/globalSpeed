@@ -58,7 +58,14 @@
     "openPage": "buka halaman",
     "seconds": "detik",
     "percent": "persen",
-    "frames": "bingkai"
+    "frames": "bingkai",
+    "toggleExtension": "toggle extension",
+    "toggleAudio": "toggle audio effects",
+    "toggleFilters": "toggle video filters",
+    "goBack": "go back",
+    "openOptions": "open options page",
+    "openGithub": "open GitHub page",
+    "toggleCircle": "toggle circle widget"
   },
   "placer": {
     "windowBounds": {
