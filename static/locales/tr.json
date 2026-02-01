@@ -6,7 +6,7 @@
     "reverse": "ters ses"
   },
   "warnings": {
-    "unusedGlobal": "Kullanılmayan genel kısayol tuşlarını kaldırın."    ,
+    "unusedGlobal": "Kullanılmayan genel kısayol tuşlarını kaldırın.",
     "selectTooltip": "Medya sıcak tuşları için tercih ettiğiniz videoyu seçin. Arka plandaki müziği farklı bir sekmeden (veya global kısayol tuşları olan başka bir programdan) kontrol etmek istiyorsanız kullanışlıdır.",
     "sliderTooltip": "Kesin kontrol için Shift tuşunu basılı tutun.",
     "captureRequired": "$1 kısayolunu kullanarak etkinleştir."
@@ -15,30 +15,22 @@
     "create": "ekle",
     "reset": "sıfırla",
     "duplicate": "çiftleştir",
-
-
-    
     "pinTooltip": "Mevcut sekmeyi kendi bağlamına (hız, filtreler vb.) sahip olması için sabitleyin.",
     "mergeBoth": "her ikisini birleştir",
     "min": "min",
     "max": "maks",
-    
     "on": "açık",
     "off": "kapalı",
     "toggle": "geçiş",
-    
     "element": "öğe",
     "backdrop": "arka fon",
     "both": "her ikisi",
-    
     "query": "seçici",
     "queryTooltip": "Filtrelenecek öğeleri bulmak için kullanılan CSS seçicisi. Örneğin, 'video, img' hem videoları hem de resimleri seçer. Gelişmiş kullanım için çevrimiçi belgelerden CSS seçicileri hakkında bilgi edinin.",
-    
     "intoPane": "pencere oluştur",
     "warning": "uyarı",
     "filters": "filtreler",
     "transforms": "dönüşmek",
-
     "blockEvents": "olayları önle",
     "blockEventsTooltip": "Olay yayılımını ve varsayılan davranışları engellemeye çalışır.",
     "color": "renk",
@@ -59,7 +51,6 @@
     "implode": "İçe çökme",
     "rotate": "Döndürmek",
     "rows": "satırlar",
-
     "copy": "kopyala",
     "paste": "yapıştır",
     "replaceWith": "$1 yerine ne koymalı?",
@@ -67,7 +58,14 @@
     "openPage": "sayfayı aç",
     "seconds": "sn",
     "percent": "%",
-    "frames": "kare"
+    "frames": "kare",
+    "back": "back",
+    "decrease": "decrease",
+    "increase": "increase",
+    "slowly": "slowly",
+    "quickly": "quickly",
+    "extension": "extension",
+    "github": "GitHub"
   },
   "placer": {
     "windowBounds": {
@@ -141,8 +139,7 @@
     "mediaInfo": "medya bilgisini göster",
     "intoPopup": "açılır pencereye",
     "intoPopupTooltip": "Mevcut sekmeyi bir açılır pencereye dönüştür.",
-    
-    "skip": "AB atlama", 
+    "skip": "AB atlama",
     "skipTooltip": "İşaretlenmiş pozisyon ile mevcut pozisyon arasındaki video segmentini atlayın.",
     "detectiveMode": "dedektif modu",
     "detectiveModeTooltip": "Sadece bir daire aracılığıyla görülebilenleri hariç her şeyi gizler.",
@@ -152,7 +149,7 @@
     "temporarySpeed": "geçici hız",
     "temporarySpeedTooltip": "Geçici hızı basılı tutun.",
     "toggleSpeed": "hız değiştirme",
-    "toggleSpeedTooltip": "Kısayol hızı ve son hız arasında geçiş yapın."    
+    "toggleSpeedTooltip": "Kısayol hızı ve son hız arasında geçiş yapın."
   },
   "options": {
     "flags": {
@@ -196,14 +193,12 @@
         "showIcon": "simgesini göster",
         "showIconTooltip": "Daire widget'ını kolayca açıp kapatmak için ana menüde bir simge göster.",
         "autoHide": "otomatik gizleme"
-      }  
+      }
     },
     "editor": {
       "header": "Kısayol Düzenleyici",
       "toggleMode": "Yerel veya genel kısayol tuşlarını kullanabilirsiniz.",
       "toggleModeTooltip": "Genel kısayollar, başka bir program kullanırken video veya sesi kontrol etmek istediğinizde yararlıdır.",
-
-
       "menuLabel": "menü etiketi",
       "triggerMode": "Çoklu tetikleme modları desteklenmektedir.",
       "triggerModeTooltip": "Yerel kısayollar (varsayılan): Esnek kısayol tuşları.\n\nGlobal kısayollar: Başka bir uygulama kullanırken video veya sesi kontrol etmek istediğinizde kullanışlıdır.\n\nBağlam menüsü: Nadiren kullanılan komutlar için idealdir. Tetiklemek için sayfaya sağ tıklayın.",
@@ -213,7 +208,7 @@
         "1": "Küresel kısayollar",
         "2": "Bağlam menüsü"
       },
-      "spacing": "aralık", 
+      "spacing": "aralık",
       "reversible": "ters çevrilebilir",
       "reversibleTooltip": "Listenin tersini gerçekleştirmek için ikinci bir kısayol ayarlamanıza olanak tanır.",
       "wraparound": "dolaşım",
@@ -266,7 +261,7 @@
     "draw": "Çiz",
     "erase": "Sil",
     "select": "Etkileşim",
-    "selectTooltip": "Web sayfasıyla etkileşim",    
+    "selectTooltip": "Web sayfasıyla etkileşim",
     "tips": "Bazı faydalı kısayollar\n1. Sağ tıklayarak sil.\n2. Shift'i basılı tutarak tıklayarak çizgi çiz.\n3. Caps Lock kullanarak $1 ve $2 modları arasında geçiş yap\n4. Silgi boyutunu ayarlamak için: orta düğmeye basılı tutarak sola veya sağa sürükle.\n5. Fırça boyutunu ayarlamak için: orta düğmeye basılı tutarak yukarı veya aşağı sürükle.\n6. Renge sağ tıklayarak sayfayı bir renkle doldurun."
   }
 }

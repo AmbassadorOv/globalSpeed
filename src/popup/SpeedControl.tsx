@@ -77,24 +77,56 @@ export function SpeedControl(props: SpeedControlProps) {
     const speedDelta = (e.deltaY / 1080) * -0.15
     props.onChange(clamp(MIN_SPEED_CHROMIUM, MAX_SPEED_CHROMIUM, props.speed + speedDelta))
   }}>
-      <button onClick={() =>  handleAddDelta(-largeStep)}><FaAngleDoubleLeft size={"1.14rem"}/></button>
-      <button onClick={() =>  handleAddDelta(-smallStep)}><FaAngleLeft size={"1.14rem"}/></button>
+      <button
+        aria-label={replaceArgs("$1 ($2)", [gvar.gsm.token.decrease, gvar.gsm.token.quickly])}
+        title={replaceArgs("$1 ($2)", [gvar.gsm.token.decrease, gvar.gsm.token.quickly])}
+        onClick={() =>  handleAddDelta(-largeStep)}
+      >
+        <FaAngleDoubleLeft size={"1.14rem"}/>
+      </button>
+      <button
+        aria-label={replaceArgs("$1 ($2)", [gvar.gsm.token.decrease, gvar.gsm.token.slowly])}
+        title={replaceArgs("$1 ($2)", [gvar.gsm.token.decrease, gvar.gsm.token.slowly])}
+        onClick={() =>  handleAddDelta(-smallStep)}
+      >
+        <FaAngleLeft size={"1.14rem"}/>
+      </button>
       <NumericInput rounding={2} noNull={true} min={MIN_SPEED_CHROMIUM} max={MAX_SPEED_CHROMIUM} value={props.speed} onChange={v => {
         props.onChange(v)
       }}/>
-      <button onClick={() =>  handleAddDelta(smallStep)}><FaAngleRight size={"1.14rem"}/></button>
-      <button onMouseDown={() => {}} onClick={() =>  handleAddDelta(largeStep)}><FaAngleDoubleRight size={"1.14rem"}/></button>
+      <button
+        aria-label={replaceArgs("$1 ($2)", [gvar.gsm.token.increase, gvar.gsm.token.slowly])}
+        title={replaceArgs("$1 ($2)", [gvar.gsm.token.increase, gvar.gsm.token.slowly])}
+        onClick={() =>  handleAddDelta(smallStep)}
+      >
+        <FaAngleRight size={"1.14rem"}/>
+      </button>
+      <button
+        aria-label={replaceArgs("$1 ($2)", [gvar.gsm.token.increase, gvar.gsm.token.quickly])}
+        title={replaceArgs("$1 ($2)", [gvar.gsm.token.increase, gvar.gsm.token.quickly])}
+        onMouseDown={() => {}}
+        onClick={() =>  handleAddDelta(largeStep)}
+      >
+        <FaAngleDoubleRight size={"1.14rem"}/>
+      </button>
     </div>
 
     {/* Slider */}
     {!!view.speedSlider && (
       <div className="slider">
-        <BsMusicNoteList title={gvar.gsm.command.speedChangesPitch} size={"1.2rem"} className={`${view.freePitch ? "active" : ""}`} onClick={(e: React.MouseEvent<SVGElement>) => {
-          if (!view.freePitch) {
-            feedbackText(gvar.gsm.command.speedChangesPitch, domRectGetOffset((e.currentTarget as any as HTMLButtonElement).getBoundingClientRect(), 8, 30))
-          }
-          setView({freePitch: !view.freePitch})
-        }}/>
+        <button
+          aria-label={gvar.gsm.command.speedChangesPitch}
+          title={gvar.gsm.command.speedChangesPitch}
+          className={`${view.freePitch ? "active" : ""}`}
+          onClick={(e) => {
+            if (!view.freePitch) {
+              feedbackText(gvar.gsm.command.speedChangesPitch, domRectGetOffset(e.currentTarget.getBoundingClientRect(), 8, 30))
+            }
+            setView({freePitch: !view.freePitch})
+          }}
+        >
+          <BsMusicNoteList size={"1.2rem"} />
+        </button>
         <input step={0.01} type="range" min={view.speedSlider.min} max={view.speedSlider.max} value={props.speed} onChange={e => {
           props.onChange(e.target.valueAsNumber)
         }}/>
