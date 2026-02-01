@@ -58,7 +58,14 @@
     "openPage": "buka halaman",
     "seconds": "detik",
     "percent": "persen",
-    "frames": "bingkai"
+    "frames": "bingkai",
+    "back": "back",
+    "decrease": "decrease",
+    "increase": "increase",
+    "slowly": "slowly",
+    "quickly": "quickly",
+    "extension": "extension",
+    "github": "GitHub"
   },
   "placer": {
     "windowBounds": {

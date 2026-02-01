@@ -65,6 +65,13 @@
     "replaceWith": "replace $1 with?",
     "invalidNumber": "invalid number",
     "openPage": "open page",
+    "back": "back",
+    "decrease": "decrease",
+    "increase": "increase",
+    "slowly": "slowly",
+    "quickly": "quickly",
+    "extension": "extension",
+    "github": "GitHub",
     "seconds": "seconds",
     "percent": "percent",
     "frames": "frames"
