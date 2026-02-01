@@ -7,10 +7,10 @@ type MoveProps = {
 
 export function Move(props: MoveProps) {
   return <div className="Move">
-    <button className="icon" onClick={() => props.onMove(false)}>
+    <button aria-label={gvar.gsm.token.up} title={gvar.gsm.token.up} className="icon" onClick={() => props.onMove(false)}>
       <GoArrowUp size="1.42rem"/>
     </button>
-    <button className="icon" onClick={() => props.onMove(true)}>
+    <button aria-label={gvar.gsm.token.down} title={gvar.gsm.token.down} className="icon" onClick={() => props.onMove(true)}>
       <GoArrowDown size="1.42rem"/>
     </button>
   </div>
