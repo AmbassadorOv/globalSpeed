@@ -24,8 +24,10 @@ export function App(props: {}) {
 
   if (view.superDisable) {
     return (
-      <div 
+      <button
         id={"SuperDisable"}
+        aria-label={gvar.gsm.token.toggle}
+        title={gvar.gsm.token.toggle}
         onClick={() => {
           setView({superDisable: false, enabled: true})
         }}
@@ -35,7 +37,7 @@ export function App(props: {}) {
         }}
       >
         <FaPowerOff size="1.78rem"/>
-      </div>
+      </button>
     )
   }
 
