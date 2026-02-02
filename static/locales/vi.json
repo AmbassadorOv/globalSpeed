@@ -7,7 +7,7 @@
   },
   "warnings": {
     "unusedGlobal": "Giải phóng các phím tắt toàn cầu không được sử dụng.",
-    "selectTooltip": "Chọn video ưa thích cho các phím tắt phương tiện. Hữu ích nếu bạn muốn điều khiển âm nhạc nền từ một tab khác (hoặc từ một chương trình khác với các phím tắt toàn cầu)."    ,
+    "selectTooltip": "Chọn video ưa thích cho các phím tắt phương tiện. Hữu ích nếu bạn muốn điều khiển âm nhạc nền từ một tab khác (hoặc từ một chương trình khác với các phím tắt toàn cầu).",
     "sliderTooltip": "Giữ phím Shift để điều chỉnh chính xác.",
     "captureRequired": "Sử dụng phím tắt $1 để kích hoạt."
   },
@@ -15,8 +15,6 @@
     "create": "tạo mới",
     "reset": "cài lại",
     "duplicate": "nhân bản",
-    
-    
     "pinTooltip": "Ghim nếu bạn muốn tab hiện tại có bối cảnh riêng của nó (tốc độ, bộ lọc, v.v.).",
     "mergeBoth": "hợp nhất cả hai",
     "min": "tối thiểu",
@@ -24,19 +22,15 @@
     "on": "bật",
     "off": "tắt",
     "toggle": "chuyển đổi",
-    
     "element": "thành phần",
     "backdrop": "phông nền",
     "both": "cả hai",
-    
     "query": "câu hỏi",
     "queryTooltip": "Bộ chọn CSS được sử dụng để tìm các phần tử để lọc. Ví dụ, 'video, img' sẽ chọn cả video và hình ảnh. Để sử dụng nâng cao, xem tài liệu trực tuyến về bộ chọn CSS.",
-    
     "intoPane": "into pane",
     "warning": "cảnh báo",
     "filters": "bộ lọc",
     "transforms": "biến đổi",
-
     "blockEvents": "chặn sự kiện",
     "blockEventsTooltip": "Sẽ cố gắng chặn sự lan truyền sự kiện và các hành vi mặc định.",
     "color": "màu sắc",
@@ -56,9 +50,7 @@
     "shrink": "Thu nhỏ",
     "implode": "Sụp đổ",
     "rotate": "Xoay",
-
     "rows": "hàng",
-    
     "copy": "sao chép",
     "paste": "dán",
     "replaceWith": "thay $1 bằng?",
@@ -66,7 +58,9 @@
     "openPage": "mở trang",
     "seconds": "giây",
     "percent": "phần trăm",
-    "frames": "khung hình"
+    "frames": "khung hình",
+    "back": "back",
+    "github": "GitHub"
   },
   "placer": {
     "windowBounds": {
@@ -140,8 +134,7 @@
     "mediaInfo": "hiển thị thông tin phương tiện",
     "intoPopup": "thành popup",
     "intoPopupTooltip": "Chuyển tab hiện tại thành cửa sổ popup.",
-    
-    "skip": "Bỏ qua AB", 
+    "skip": "Bỏ qua AB",
     "skipTooltip": "Bỏ qua một phân đoạn của video giữa vị trí đánh dấu và vị trí hiện tại.",
     "detectiveMode": "chế độ thám tử",
     "detectiveModeTooltip": "Ẩn mọi thứ trừ những gì có thể nhìn thấy qua một vòng tròn.",
@@ -151,7 +144,7 @@
     "temporarySpeed": "tốc độ tạm thời",
     "temporarySpeedTooltip": "Nhấn và giữ tốc độ tạm thời.",
     "toggleSpeed": "chuyển đổi tốc độ",
-    "toggleSpeedTooltip": "Chuyển đổi giữa tốc độ phím tắt và tốc độ cuối cùng."    
+    "toggleSpeedTooltip": "Chuyển đổi giữa tốc độ phím tắt và tốc độ cuối cùng."
   },
   "options": {
     "flags": {
@@ -201,8 +194,6 @@
       "header": "Chỉnh sửa phím tắt",
       "toggleMode": "Bạn có thể sử dụng các phím tắt cục bộ hoặc chung.",
       "toggleModeTooltip": "Các phím tắt chung rất hữu ích khi bạn muốn điều khiển video hoặc âm thanh trong khi sử dụng một chương trình khác.",
-
-    
       "menuLabel": "nhãn menu",
       "triggerMode": "Hỗ trợ nhiều chế độ kích hoạt.",
       "triggerModeTooltip": "Phím tắt cục bộ (mặc định): Phím tắt linh hoạt.\n\nPhím tắt toàn cục: Hữu ích khi bạn muốn điều khiển video hoặc âm thanh khi sử dụng ứng dụng khác.\n\nMenu ngữ cảnh: Lý tưởng cho các lệnh ít được sử dụng. Nhấp chuột phải vào trang để kích hoạt.",
@@ -212,7 +203,7 @@
         "1": "Phím tắt toàn cầu",
         "2": "Menu ngữ cảnh"
       },
-      "spacing": "khoảng cách", 
+      "spacing": "khoảng cách",
       "reversible": "có thể đảo ngược",
       "reversibleTooltip": "Cho phép thiết lập phím tắt thứ hai để đảo ngược danh sách.",
       "wraparound": "quay vòng",
@@ -265,7 +256,7 @@
     "draw": "Vẽ",
     "erase": "Xóa",
     "select": "Tương tác",
-    "selectTooltip": "Tương tác với trang web",    
+    "selectTooltip": "Tương tác với trang web",
     "tips": "Một số phím tắt hữu ích\n1. Xóa bằng nút chuột phải.\n2. Vẽ đường bằng cách giữ Shift và nhấp chuột.\n3. Chuyển đổi giữa chế độ $1 và $2 bằng cách sử dụng Caps Lock\n4. Để điều chỉnh kích thước của tẩy: giữ nút chuột giữa và kéo sang trái hoặc phải.\n5. Để điều chỉnh kích thước của cọ: giữ nút chuột giữa và kéo lên hoặc xuống.\n6. Làm ngập trang bằng một màu bằng cách nhấp chuột phải vào màu."
   }
 }
