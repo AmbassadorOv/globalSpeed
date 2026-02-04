@@ -17,6 +17,10 @@
       padding: var(--padding) 0px;
       
       &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
         outline: 1px solid var(--focus-color);
       }
   
