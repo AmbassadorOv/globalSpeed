@@ -43,13 +43,23 @@
     margin-top: 15px;
     column-gap: 5px; 
 
-    & > svg {
+    & > .icon-button {
+      background: none;
+      border: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
       color: var(--header-icon-color);
       opacity: 0.5;
 
       &.active {
         opacity: 1;
         color: var(--header-icon-active-color);
+      }
+
+      &:focus-visible {
+        outline: 1px solid var(--focus-color);
       }
     }
   }

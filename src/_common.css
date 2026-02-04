@@ -167,7 +167,10 @@ button, input[type="text"], textarea {
 
   &:focus {
     border: 1px solid var(--focus-color);
-    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--focus-color);
   }
 
   &.error {
