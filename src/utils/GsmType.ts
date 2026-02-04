@@ -59,6 +59,10 @@ export type Gsm = {
     replaceWith: string,
     invalidNumber: string,
     openPage: string,
+    back: string,
+    increase: string,
+    decrease: string,
+    extension: string,
     seconds: string,
     percent: string,
     frames: string
