@@ -58,7 +58,10 @@
     "openPage": "buka halaman",
     "seconds": "detik",
     "percent": "persen",
-    "frames": "bingkai"
+    "frames": "bingkai",
+    "back": "back",
+    "increase": "increase",
+    "decrease": "decrease"
   },
   "placer": {
     "windowBounds": {
