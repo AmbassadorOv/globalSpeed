@@ -67,7 +67,9 @@
     "openPage": "open page",
     "seconds": "seconds",
     "percent": "percent",
-    "frames": "frames"
+    "frames": "frames",
+    "back": "back",
+    "extension": "extension"
   },
   "placer": {
     "windowBounds": {

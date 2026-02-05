@@ -58,7 +58,9 @@
         "openPage": "відкрити сторінку",
         "seconds": "секунди",
         "percent": "відсотки",
-        "frames": "кадри"
+        "frames": "кадри",
+        "back": "back",
+        "extension": "extension"
     },
     "placer": {
         "windowBounds": {

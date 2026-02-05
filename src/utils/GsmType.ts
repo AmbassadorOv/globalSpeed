@@ -61,7 +61,9 @@ export type Gsm = {
     openPage: string,
     seconds: string,
     percent: string,
-    frames: string
+    frames: string,
+    back: string,
+    extension: string
   },
   placer: {
     windowBounds: {
