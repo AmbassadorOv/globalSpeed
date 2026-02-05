@@ -19,6 +19,7 @@
 
     "min": "min",
     "max": "max",
+    "back": "back",
     "pinTooltip": "Anclar si quieres que la pestaña actual tenga su propio contexto (velocidad, filtros, etc).",
     "mergeBoth": "fusionar ambos",
     "on": "encendido",
