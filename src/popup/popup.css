@@ -10,10 +10,19 @@ body {
 }
 
 #SuperDisable {
+  display: block;
   padding: 10px;
   background-color: #fafafa; 
   color: #666; 
   cursor: pointer;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+
+#SuperDisable:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: -2px;
 }
 
 #App {

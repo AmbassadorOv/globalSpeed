@@ -58,7 +58,11 @@
     "openPage": "buka halaman",
     "seconds": "detik",
     "percent": "persen",
-    "frames": "bingkai"
+    "frames": "bingkai",
+    "back": "kembali",
+    "toggleExtension": "aktifkan/nonaktifkan ekstensi",
+    "videoFilters": "filter video",
+    "audioEffects": "efek audio"
   },
   "placer": {
     "windowBounds": {
