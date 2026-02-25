@@ -65,6 +65,7 @@
     "replaceWith": "replace $1 with?",
     "invalidNumber": "invalid number",
     "openPage": "open page",
+    "back": "back",
     "seconds": "seconds",
     "percent": "percent",
     "frames": "frames"

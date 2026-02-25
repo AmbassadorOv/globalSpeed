@@ -15,29 +15,22 @@
     "create": "crea",
     "reset": "ripristina",
     "duplicate": "duplica",
-
-    
     "pinTooltip": "Blocca se vuoi che la scheda corrente abbia il suo contesto (velocità, filtri, ecc).",
     "mergeBoth": "unisci entrambi",
     "min": "min",
     "max": "max",
-    
     "on": "on",
     "off": "off",
     "toggle": "cambia",
-    
     "element": "elemento",
     "backdrop": "sfondo",
     "both": "entrambi",
-    
     "query": "oggetto",
     "queryTooltip": "Selettore CSS usato per trovare gli elementi da filtrare. Ad esempio, 'video, img' selezionerà sia video che immagini. Per un utilizzo avanzato, visualizza la documentazione online sui selettori CSS.",
-    
     "intoPane": "in pannello",
     "warning": "avviso",
     "filters": "filtri",
     "transforms": "trasforma",
-
     "blockEvents": "blocca eventi",
     "blockEventsTooltip": "Tenterà di bloccare la propagazione degli eventi e il comportamento di default.",
     "color": "colore",
@@ -58,7 +51,6 @@
     "implode": "Implodere",
     "rotate": "Ruotare",
     "rows": "righe",
-    
     "copy": "copia",
     "paste": "incolla",
     "replaceWith": "sostituire $1 con?",
@@ -66,7 +58,8 @@
     "openPage": "apri pagina",
     "seconds": "secondi",
     "percent": "percento",
-    "frames": "fotogrammi"
+    "frames": "fotogrammi",
+    "back": "indietro"
   },
   "placer": {
     "windowBounds": {
@@ -140,7 +133,6 @@
     "mediaInfo": "mostra informazioni sul media",
     "intoPopup": "in popup",
     "intoPopupTooltip": "Trasforma la scheda corrente in una finestra popup.",
-    
     "skip": "salta AB",
     "skipTooltip": "Salta un segmento del video tra la posizione contrassegnata e la posizione attuale.",
     "detectiveMode": "modalità detective",
@@ -151,7 +143,7 @@
     "temporarySpeed": "velocità temporanea",
     "temporarySpeedTooltip": "Premi e tieni premuta la velocità temporanea.",
     "toggleSpeed": "velocità toggle",
-    "toggleSpeedTooltip": "Alterna tra la velocità della scorciatoia e l'ultima velocità."    
+    "toggleSpeedTooltip": "Alterna tra la velocità della scorciatoia e l'ultima velocità."
   },
   "options": {
     "flags": {
@@ -201,8 +193,6 @@
       "header": "Modifica Scorciatoie",
       "toggleMode": "Puoi usare scorciatoie locali o globali.",
       "toggleModeTooltip": "Le scorciatoie globali sono utili quando vuoi controllare video o audio mentre stai usando un altro programma.",
-
-
       "menuLabel": "etichetta del menu",
       "triggerMode": "Sono supportate molteplici modalità di attivazione.",
       "triggerModeTooltip": "Scorciatoie locali (predefinite): Tasti di scelta rapida flessibili.\n\nScorciatoie globali: Utili quando vuoi controllare video o audio mentre usi un'altra applicazione.\n\nMenu contestuale: Ideale per comandi usati raramente. Clicca con il tasto destro sulla pagina per attivarli.",
@@ -227,7 +217,7 @@
         "3": "Cicla tra una lista di valori",
         "4": "Imposta interattivamente a valore.",
         "5": "Regola interattivamente per valore."
-      },    
+      },
       "openModes": {
         "foregroundTab": "scheda in primo piano",
         "backgroundTab": "scheda in secondo piano",
@@ -265,7 +255,7 @@
     "draw": "Disegna",
     "erase": "Cancella",
     "select": "Interagire",
-    "selectTooltip": "Interagisci con la pagina web",    
+    "selectTooltip": "Interagisci con la pagina web",
     "tips": "Alcune scorciatoie utili\n1. Cancellare con il tasto destro del mouse.\n2. Disegnare linee tenendo premuto Shift e facendo clic.\n3. Alternare tra modalità $1 e $2 usando il tasto Caps Lock\n4. Per regolare la dimensione della gomma: tenere premuto il tasto centrale del mouse e trascinare verso sinistra o destra.\n5. Per regolare la dimensione del pennello: tenere premuto il tasto centrale del mouse e trascinare verso l'alto o il basso.\n6. Riempire la pagina con un colore facendo clic con il tasto destro sul colore."
   }
 }
