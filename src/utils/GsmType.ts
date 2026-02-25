@@ -22,6 +22,7 @@ export type Gsm = {
     mergeBoth: string,
     min: string,
     max: string,
+    back: string,
     on: string,
     off: string,
     toggle: string,
