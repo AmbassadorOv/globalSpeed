@@ -18,6 +18,7 @@ export type Gsm = {
     create: string,
     reset: string,
     duplicate: string,
+    back: string,
     pinTooltip: string,
     mergeBoth: string,
     min: string,
