@@ -7,7 +7,7 @@
   },
   "warnings": {
     "unusedGlobal": "Libera las teclas de acceso rápido globales no utilizadas.",
-    "selectTooltip": "Selecciona el video preferido para las teclas de acceso rápido de medios. Útil si quieres controlar la música de fondo desde una pestaña diferente (o desde otro programa con teclas de acceso rápido globales)."    ,
+    "selectTooltip": "Selecciona el video preferido para las teclas de acceso rápido de medios. Útil si quieres controlar la música de fondo desde una pestaña diferente (o desde otro programa con teclas de acceso rápido globales).",
     "sliderTooltip": "Mantén presionada la tecla Shift para un control preciso.",
     "captureRequired": "Usa el atajo $1 para activar."
   },
@@ -15,8 +15,6 @@
     "create": "crear",
     "reset": "restablecer",
     "duplicate": "duplicar",
-
-
     "min": "min",
     "max": "max",
     "pinTooltip": "Anclar si quieres que la pestaña actual tenga su propio contexto (velocidad, filtros, etc).",
@@ -24,19 +22,15 @@
     "on": "encendido",
     "off": "apagado",
     "toggle": "alternar",
-
     "element": "elemento",
     "backdrop": "fondo",
     "both": "ambos",
-
     "query": "selector",
     "queryTooltip": "Selector CSS utilizado para encontrar los elementos a filtrar. Por ejemplo, 'video, img' seleccionará tanto videos como imágenes. Para un uso avanzado, consulte la documentación en línea sobre selectores CSS.",
-    
     "intoPane": "crear ventana",
     "warning": "advertencia",
     "filters": "filtros",
     "transforms": "transforma",
-
     "blockEvents": "bloquear eventos",
     "blockEventsTooltip": "El modo codicioso intentará bloquear la propagación de eventos y los comportamientos predeterminados.",
     "color": "color",
@@ -57,7 +51,6 @@
     "implode": "Implodir",
     "rotate": "Rotar",
     "rows": "filas",
-    
     "copy": "copiar",
     "paste": "pegar",
     "replaceWith": "¿reemplazar $1 por?",
@@ -65,7 +58,8 @@
     "openPage": "abrir página",
     "seconds": "segundos",
     "percent": "por ciento",
-    "frames": "fotogramas"
+    "frames": "fotogramas",
+    "back": "atrás"
   },
   "placer": {
     "windowBounds": {
@@ -139,7 +133,6 @@
     "mediaInfo": "mostrar información del medio",
     "intoPopup": "en ventana emergente",
     "intoPopupTooltip": "Convertir la pestaña actual en una ventana emergente.",
-    
     "skip": "salto AB",
     "skipTooltip": "Saltar un segmento del video entre la posición marcada y la posición actual.",
     "detectiveMode": "modo detective",
@@ -150,7 +143,7 @@
     "temporarySpeed": "velocidad temporal",
     "temporarySpeedTooltip": "Presiona y mantén la velocidad temporal.",
     "toggleSpeed": "alternar velocidad",
-    "toggleSpeedTooltip": "Alterna entre la velocidad del atajo y la última velocidad."    
+    "toggleSpeedTooltip": "Alterna entre la velocidad del atajo y la última velocidad."
   },
   "options": {
     "flags": {
@@ -199,8 +192,6 @@
       "header": "Editor de accesos directos",
       "toggleMode": "Puede usar teclas de acceso directo locales o globales.",
       "toggleModeTooltip": "Los accesos directos globales son útiles cuando desea controlar video o audio mientras usa otro programa.",
-
-
       "menuLabel": "etiqueta del menú",
       "triggerMode": "Se admiten varios modos de activación.",
       "triggerModeTooltip": "Atajos locales (por defecto): Teclas de acceso rápido flexibles.\n\nAtajos globales: Útiles cuando quieres controlar vídeo o audio mientras usas otra aplicación.\n\nMenú contextual: Ideal para comandos que se usan raramente. Haz clic derecho en la página para activarlos.",
@@ -263,7 +254,7 @@
     "draw": "Dibujar",
     "erase": "Borrar",
     "select": "Interactuar",
-    "selectTooltip": "Interactuar con la página web",        
+    "selectTooltip": "Interactuar con la página web",
     "tips": "Algunos atajos útiles\n1. Borrar con el botón derecho del ratón.\n2. Dibujar líneas manteniendo presionado Shift y haciendo clic.\n3. Cambiar entre el modo $1 y $2 usando Bloq Mayús\n4. Para ajustar el tamaño de la goma: mantén presionado el botón central del ratón y arrastra hacia la izquierda o la derecha.\n5. Para ajustar el tamaño del pincel: mantén presionado el botón central del ratón y arrastra hacia arriba o hacia abajo.\n6. Inunde la página con un color haciendo clic derecho en el color."
   }
 }
